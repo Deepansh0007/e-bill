@@ -1,0 +1,18 @@
+.boxes{
+    display: inline-flex;
+    gap: 2rem;
+    padding: 1rem;
+}
+.box{
+    background-color: rgb(210, 209, 209);
+    height: 6rem;
+    width: 12rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    padding: .3rem .5rem;
+}
+.data{
+    float: right;
+    font-size: 28px;
+}

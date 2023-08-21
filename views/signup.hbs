@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/signup.css" />
+  </head>
+  <body>
+    <div class="box">
+      <img src="/logo.png" class="logo" />
+      <form class="signup" id="form" action="/auth/signup" method="post">
+        <input type="email" name="email" id="email" placeholder="Enter email" required/>
+        <p></p>
+        <input type="password" name="password" id="pwd" placeholder="Create password" required/>
+        <p></p>
+        <input type="password" name="confirmPassword" id="pwd2" placeholder="Confirm password"/>
+        <p></p>
+        <button type="submit" id="submit">Sign-in</button>
+         {{#if message}}
+    <h5>**Passwords do not match</h5>
+    {{/if}}
+      </form>
+     
+    </div>
+     </body>
+</html>

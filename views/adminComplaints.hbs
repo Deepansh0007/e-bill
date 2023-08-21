@@ -1,0 +1,91 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="../common.css" />
+<link rel="stylesheet" href="../adminComplaints.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+
+<body>
+  <nav class="navbar">
+    <div id="name">
+      <h5><i class="bi bi-box-fill"></i>EZ-BILL</h5>
+    </div>
+    <a href="/logout">Logout</a>
+  </nav>
+  <div class="left-main">
+    <div class="left-container">
+      <div class="menu">
+        <p><a href="/admin/dashboard">Dashboard</a></p>
+        <p><a href="/admin/customers">Customers</a></p>
+        <p><a href="/admin/bills">Billings</a></p>
+        <p><a href="/admin/complaints">Complaints</a></p>
+      </div>
+    </div>
+    <div class="mainContainer">
+      <h2>Complaints</h2>
+      <h5>Complaints> overview</h5>
+      <div id="scroll-container">
+        <div id="scroll-target">
+          <table class="head">
+            <thead>
+              <tr>
+                <th class="small">Complaint ID</th>
+                <th class="small">User ID</th>
+                <th class="large">Complaint</th>
+                <th class="small">Status</th>
+                <th class="small">Process</th>
+              </tr>
+            </thead>
+          </table>
+          {{#each data}}
+          <table class="tableData">
+            <tr id="{{this.COMPLAINTID}}">
+              <td class="small">
+                <p class="data" id="cid">{{this.COMPLAINTID}}</p>
+              </td>
+              <td class="small">
+                <p class="data">{{this.USERID}}</p>
+              </td>
+              <td class="large">
+                <p class="data">{{this.COMPLAINT}}</p>
+              </td>
+              <td class="small">
+                <p class="data">{{this.STATUS}}</p>
+              </td>
+              <td class="small"><button id="buttonn" type="button" onclick="process()">Process</button></td>
+            </tr>
+          </table>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+        function process() {
+          if (document.getElementById('buttonn')) {
+        let cID
+          = document.getElementById('cid').innerText; console.log(cID)
+        fetch('/admin/processed', {
+          method: "POST", headers: {
+            "Content-Type":
+              "application/json"
+          }, body: JSON.stringify({ cid: cID })
+        })
+        document.getElementById(cID).remove()
+        alert("Complaint processed")
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

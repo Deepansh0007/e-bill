@@ -1,0 +1,22 @@
+.head{
+    margin-top: 2rem;
+    border-top: 2px;
+}
+.tableData{
+   border-top: none;
+}
+.tableData td,.head th{
+    width: 150px;
+    padding-left: 5px;
+    border: 2px solid black;
+}
+.data{
+    margin: 0;
+}
+table{
+    background-color: rgb(210, 209, 209);
+    margin-left: 3rem;
+}
+.tableData td{
+    border-top: none;
+}

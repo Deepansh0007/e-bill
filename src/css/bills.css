@@ -1,0 +1,29 @@
+.head{
+    margin-top: 2rem;
+    border-bottom: none;
+}
+.tableData td,.head th{
+    padding-left: .5rem;
+    width: 150px;
+    border: 2px solid black;
+}
+.data{
+    margin: 0;
+}
+table{
+    background-color: rgb(210, 209, 209);
+    margin-left: 3rem;
+}
+.tableData td{
+    border-top: none;
+}
+#pay{
+    position: absolute;
+    top: 186px;
+    left: 1200px;
+    width: 50px;
+    border-radius: 5px;
+    background-color: #0ce40c;
+    padding-top: 0;
+    border: 1.5px solid black;
+}

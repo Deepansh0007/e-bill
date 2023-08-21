@@ -1,0 +1,30 @@
+.boxes{
+    gap: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    display: flex;
+    height: 6rem;
+    width: 12rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+    font-size: 1.15rem;
+    padding: .25rem;
+    background-color: rgb(210, 209, 209);
+    justify-content: space-between;
+}
+.first{
+    display: flex;
+    gap: 2rem;
+}
+.second{
+    display: flex;
+    gap: 2rem;
+}
+.data{
+   float: right;
+   font-size: 24px;
+   margin-top: 3rem;
+}

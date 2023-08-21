@@ -1,0 +1,40 @@
+#scroll-container {
+    overflow: auto;
+    height: 300px;
+  }
+  .head{
+    margin-top: 2rem;
+}
+
+td,th{
+    width: 200px;
+    padding: 3.5px;
+}
+.data{
+    margin: 0;
+}
+table{
+    background-color: rgb(210, 209, 209);
+    margin-left: 3rem;
+}
+.tableData tr{
+    border-top: none;
+}
+.head th{
+    border: 2px solid black;
+}
+.tableData td{
+    border: 2px solid black;
+    border-top: none;
+}
+.tableData .small, .head .small{
+    width: 9rem;
+    font-size: 1rem;
+}
+.tableData .large, .head .large{
+    width: 20rem;
+}
+.tableData button{
+    width: 8.4rem;
+    background-color: rgb(5, 214, 5);
+}

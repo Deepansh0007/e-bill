@@ -1,0 +1,34 @@
+#scroll-container {
+	overflow: auto;
+	height: 364px;
+}
+.head {
+	margin-top: 2rem;
+}
+
+td,
+th {
+	width: 300px;
+	padding: 3.5px;
+}
+.data {
+	margin: 0;
+}
+table {
+	background-color: rgb(210, 209, 209);
+	margin-left: 3rem;
+}
+.tableData tr {
+	border-top: none;
+}
+.head th {
+	border: 2px solid black;
+}
+.tableData td {
+	border: 2px solid black;
+	border-top: none;
+}
+.tableData .small,
+.head .small {
+	width: 8rem;
+}

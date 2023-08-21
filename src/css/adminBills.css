@@ -1,0 +1,69 @@
+#scroll-container {
+    overflow: auto;
+    height: 325px;
+  }  
+.head{
+margin-top: 1rem;
+}
+
+td,th{
+    width: 140px;
+    padding: 5px;
+}
+.data{
+    margin: 0;
+    padding: 0;
+}
+table{
+    background-color: rgb(210, 209, 209);
+    margin-left: 1rem;
+}
+#buttonn{
+    background-color: rgb(5, 214, 5);
+    border-radius: 1rem;
+    padding: 0 .5rem;
+    margin-left: 57rem;
+    font-size: .9rem;
+    margin-top: .5rem;
+}
+
+.bill{
+    position: absolute;
+    top: 13.72rem;
+    left: 13rem;
+    display: none;
+    padding: 0;
+}
+.bill th,.bill td{
+    border: 2px solid black;
+    padding: .2rem;
+}
+.head th{
+    border: 2px solid black;
+}
+.tableData td{
+    border: 2px solid black;
+    border-top: none;
+}
+select{
+    width: 10.5rem;
+    height: 1.58rem;
+}
+input{
+    height: 1.58rem;
+    width: 10.58rem;
+}
+#gen{
+    height: 1.58rem;
+    background-color: rgb(5, 214, 5);
+    padding: 0;
+    width: 10.58rem;
+    font-size: .9rem;
+    border: 1px solid black;
+}
+.hidden{
+    display: none;
+}
+.head .small, .tableData .small{
+    width:7rem;
+}

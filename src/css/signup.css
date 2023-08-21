@@ -1,0 +1,39 @@
+.box{
+    height: 300px;
+    width: 250px;
+    background: rgb(92, 92, 201);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.logo{
+    height: 50px;
+    position: relative;
+    left: 100px;
+}
+.signup{
+    padding: 30px;
+}
+#email,#pwd,#pwd2{
+    width: 100%;
+    border-bottom: 1px solid aliceblue;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background: transparent;
+}
+#submit{
+    width: 197px;
+    border-radius: 10px;
+    height: 25px;
+}
+#submit:hover{
+    background: rgb(203, 93, 13);
+}
+h5{
+    text-align: center;
+    color: rgb(213, 24, 24);
+}

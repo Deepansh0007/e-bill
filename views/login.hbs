@@ -1,0 +1,96 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/login.css" />
+  </head>
+  <body>
+    <div class="main-main">
+      <div class ="left-main">
+      <h1>EZ-BILL</h1>
+      <p>This website will at the end of its construction will act as a consumer <br>service for users for easy payment of their Electricity Bill as well as interact<br> with their providers for any queries or complaints.</p>
+      </div>
+    <div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true" />
+
+      <div class="signup">
+
+        <form
+          action="/auth/signup"
+          method="post"
+          onsubmit="checkPassword(event)"
+        >
+          <label for="chk" aria-hidden="true">Sign up</label>
+          <input type="text" name="name" placeholder="User name" required="" />
+          <input type="email" name="email" placeholder="Email" required="" />
+          <input
+            type="password"
+            id="pwd"
+            name="password"
+            placeholder="Password"
+            required=""
+          />
+          <input
+            type="password"
+            id="pwd2"
+            name="confirmPassword"
+            placeholder="confirmPassword"
+            required=""
+          />
+          <button id="btn" type="submit">Sign up</button>
+        </form>
+      </div>
+
+      <div class="login">
+        <form action="/auth/login" method="post">
+          <label for="chk" aria-hidden="true">Login</label>
+          <input type="email" name="email" placeholder="Email" required="" />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required=""
+          />
+          <select name="userType">
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
+          </select>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+    </div>
+    <script>
+      function checkPassword(event){ 
+        let pwd1=document.getElementById('pwd') 
+        let pwd2=document.getElementById('pwd2') 
+        if(pwd1.value !== pwd2.value){
+        event.preventDefault(); 
+        alert("Passwords do not match") 
+        return false; 
+      } 
+	  return true 
+    }
+    {{#if wrongPassword}}
+     alert("Wrong password")
+     {{/if}}
+     {{#if userNotRegistered}}
+     alert("User not registered")
+     {{/if}}
+     {{#if adminNotRegistered}}
+     alert("Admin not registered")
+     {{/if}}
+     {{#if exists}}
+      alert("User already exists")
+      {{/if}}
+      {{#if inserted}}
+      alert("User registered. Login to continue")
+      {{/if}}
+      {{#if wp}}
+      alert("Wrong password");
+      {{/if}}
+    </script>
+  </body>
+</html>
