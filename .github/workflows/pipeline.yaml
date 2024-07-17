@@ -1,0 +1,22 @@
+name: Codewiz action
+
+on:
+  push:
+    branches:
+      - main #Your branch name  
+      
+jobs:
+  run:
+    name: Reading repo
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Codewiz action
+        id: codewiz
+        uses: Deepansh0007/codewiz@v1.5.14
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repo: ${{ github.server_url }}/${{ github.repository }}
+          branch: ${{ github.ref }}
+          commit: ${{ github.sha }}
